@@ -169,6 +169,12 @@ From here follow the images shown below.
 Scroll to the bottom of the page and click here:
 ![](images/giteasetup.png)
 
+Make sure to create an account. The first account created will be the admin:
+![](images/gitearegistar.png)
+
+And once you do so, it will log you in automatically and you should see the following:
+![](images/giteasuccess.png)
+
 ### Exposing Gitea to the web
 **NOTE** unless you have a domain name the rest of this example won't be possible. Feel free to just read/follow along.
 
@@ -203,8 +209,12 @@ docker-compose restart tunnel
 Navigating back to your tunnels you can see a valid connector:
 ![](images/cftunnelconnected.png)
 
-Let's move on to setting up a DNS record for this app. Copy these settings. Make sure to replace domain with your domain.
+Let's move on to setting up a DNS record for this app. Copy these settings. Make sure to replace domain with your domain:
 ![](images/cftunneldomain.png)
+
+If we take a look at the url we can see that we are using the non-localhost version. Note that it also signed us out because it reset the user token (this is good for security reasons):
+![](images/giteaexposed.png)
+
 
 After saving these settings we can go to that url and **BOOM!**. You've just successfully setup a public alternative to 
 GitHub.
